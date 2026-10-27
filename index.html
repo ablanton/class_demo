@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.5;
+    }
+
+    header, footer {
+      border-bottom: 2px solid #000;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    footer {
+      border-bottom: none;
+      border-top: 2px solid #000;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .tile {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      border: 2px solid #000;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .tile-text {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.85);
+      border-top: 2px solid #000;
+    }
+
+    .tile-text h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .grid {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Grid</h1>
+    <p>Resize the window to see the layout adapt.</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="tile" style="background-image: url('https://picsum.photos/seed/1/600/450');">
+        <div class="tile-text">
+          <h2>Item 1</h2>
+          <p>Short description of this grid item goes here.</p>
+        </div>
+      </article>
+      <article class="tile" style="background-image: url('https://picsum.photos/seed/2/600/450');">
+        <div class="tile-text">
+          <h2>Item 2</h2>
+          <p>Short description of this grid item goes here.</p>
+        </div>
+      </article>
+      <article class="tile" style="background-image: url('https://picsum.photos/seed/3/600/450');">
+        <div class="tile-text">
+          <h2>Item 3</h2>
+          <p>Short description of this grid item goes here.</p>
+        </div>
+      </article>
+      <article class="tile" style="background-image: url('https://picsum.photos/seed/4/600/450');">
+        <div class="tile-text">
+          <h2>Item 4</h2>
+          <p>Short description of this grid item goes here.</p>
+        </div>
+      </article>
+      <article class="tile" style="background-image: url('https://picsum.photos/seed/5/600/450');">
+        <div class="tile-text">
+          <h2>Item 5</h2>
+          <p>Short description of this grid item goes here.</p>
+        </div>
+      </article>
+      <article class="tile" style="background-image: url('https://picsum.photos/seed/6/600/450');">
+        <div class="tile-text">
+          <h2>Item 6</h2>
+          <p>Short description of this grid item goes here.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Basic Class Site</p>
+  </footer>
+</body>
+</html>
